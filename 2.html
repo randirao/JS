@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.2em;
+            text-align: center;
+            color:darkslateblue;
+            background-color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>인치 단위 환산</h1>
+  <h2 id = "result"></h2>
+
+    <script>
+            let result = document.getElementById("result");
+
+			var inch = prompt("inch 단위의 숫자를 입력해주세요.", "예) 30");
+			alert(inch + "inch는 " + inch * 2.54 + " 입니다.");
+			result.innerHTML= inch + 'inch는 ' + inch * 2.54 + " 입니다.";
+    </script>   
+</body>
+</body>
+</html>
