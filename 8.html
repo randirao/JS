@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		
+	</head>
+    <title>문자열 메서드</title>
+  </head> 
+  <body>  
+		<form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">문자열입력</label>
+                <input type="text" class="form-control" id="input" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">결과</label>
+                <input type="text" class="form-control" id="print" readonly>
+             </div>
+	        <div>
+                <button type="button" class="btn btn-primary" onclick = "subStr()">문자열 추출(substring)</button>
+	            <button type="reset" class="btn btn-primary">reset</button>
+	        </div>
+            <div id = "result" style="display:none;">결과가 성공적으로 처리되었습니다.</div>
+        </form>
+    <script>
+        function subStr(){
+            let txt = document.getElementById('input').value;
+            let print = document.getElementById('print');
+            print.value = txt.substring(0,4) + "년 " + txt.substring(4,6) + "월 " + txt.substring(6,8) + "일입니다.";
+            document.getElementById(result).style.display = "block";
+        }
+    </script>
+  </body>
+
+</html>
