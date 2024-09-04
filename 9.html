@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head> 
+  <body>  
+    <form name = "frm">
+
+        <div>
+            <label>문자열 입력</label>
+            <input type = "text" id = "string1" onkeyup = "getString()">
+        
+        </div>
+
+        <div>
+            <label>결과</label>
+            <input type = "text" readonly id = "result">
+
+        </div>
+
+        <div id = "result2">
+            값을 넣을 예정입니다.
+        </div>
+
+        <button type = "button" onclick = "subStrings()">문자열 추출</button>
+        <button type = "button" onclick = "frm.result.value = inputVal.toUpperCase()">대문자 변환</button>
+        <button type = "button" onclick = "frm.result.value = inputVal.length">문자열 길이</button>
+        <button type = "button" onclick = "frm.result.value = inputVal.trim()">문자열 공백제거</button>
+        <button type = "button" onclick = "frm.result.value = inputVal.concat('헿')">문자열 합치기</button>
+        <button type = "button" onclick="reseting()">초기화</button>
+
+    </form>
+
+    <script>
+        let string1 = document.getElementById("string1")
+        let inputVal="";
+        let result = document.getElementById("result")
+        let result2 = document.getElementById("result2")
+
+        function getString(){
+            inputVal = string1.value
+            console.log(inputVal)
+        }
+
+        function subStrings(){
+            alert(`${inputVal.substring(0, 4)}년입니다.`)
+            frm.result.value = inputVal.substring(0, 4) + "년" +inputVal.substring(4,6) + "월" +  inputVal.substring(6, 8) + "일";
+            result2.innerHTML = "결과가 성공적으로 처리되었습니다."
+        }
+
+        function reseting(){
+            frm.reset()
+            result2.innerrHTML = ""
+        }
+
+    </script>
+
+  </body>
+
+</html>
