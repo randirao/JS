@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 <title>JavaScript 연습</title>
-<script>
-	let msg = document.getElementById('msg')
-	function show() {
-		let input = form1.inputname.value;
-		alert(input);
-		document.getElementById("msg").innerHTML = `${input}님 안녕하세요! 반갑습니다!`
-	}
-</script>
+
 </head>
 	
 <body>
@@ -25,6 +19,13 @@
 <!--수정-->
 <div id = 'msg'></div>
 
-
+<script>
+	let msg = document.getElementById('msg')
+	function show() {
+		let input = document.getElementById('input').value;
+		alert(input);
+		msg.innerHTML = `${input}님 안녕하세요! 반갑습니다!`
+	}
+</script>
 </body>
 </html>
